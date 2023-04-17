@@ -11,7 +11,14 @@ class Giochi extends Product {
         
         $this->caratteristiche = $caratteristiche;
         $this->dimensioni = $dimensioni;
+    }
 
+    function getCaratteristiche(){
+        return $this->caratteristiche;
+    }
+
+    function getDimensioni(){
+        return $this->dimensioni;
     }
 }
 

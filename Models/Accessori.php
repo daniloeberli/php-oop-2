@@ -12,6 +12,14 @@ class Accessori extends Product{
         $this->dimensioni = $dimensioni;    
         
     }
+
+    function getMateriale(){
+        return $this->materiale;
+    }
+     
+    function getDimensioni(){
+        return $this->dimensioni;
+    }
 }
 
 

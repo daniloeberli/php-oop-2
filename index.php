@@ -29,6 +29,17 @@ require_once __DIR__ . '/Models/Category.php';
                             <h6 class="card-text"><?php echo $product->category->getCategory() ?></h6>
                             <p class="card-text"><?php echo 'Prezzo: ' . $product->getPrice() . '€' ?></p>
                             <p class="card-text"><?php echo 'Descrizione: ' . $product->getDescription() ?></p>
+                            <?php if (get_class($product) == 'Cibo') { ?>
+                                <p class="card-text"> <?php echo 'Peso netto: ' . $product->getWeight() . 'g' ?></p>
+                            <?php } ?>
+                            <?php if (get_class($product) == 'Giochi') { ?>
+                                <p class="card-text"> <?php echo 'Caratteristiche: ' . $product->getCaratteristiche() ?></p>
+                                <p class="card-text"> <?php echo 'Dimensioni' . $product->getDimensioni() ?></p>
+                            <?php } ?>
+                            <?php if (get_class($product) == 'Accessori') { ?>
+                                <p class="card-text"> <?php echo 'Materiale: ' . $product->getMateriale() ?></p>
+                                <p class="card-text"> <?php echo 'Dimensioni' . $product->getDimensioni() ?></p>
+                            <?php } ?>
                         </div>
                     </div>
                 </div> <?php } ?>
