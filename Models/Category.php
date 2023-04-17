@@ -9,7 +9,7 @@ class Category{
         $this->category_type = $name;
     }
 
-    function get_category(){
+    function getcategory(){
         return $this->category_type;
     }
 }
