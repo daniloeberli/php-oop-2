@@ -39,10 +39,18 @@ class Warehouse{
     }
 }
 
-$magazzino = new Warehouse('torino','italia','bella via','fedex',0);
+try{
+    $magazzino = new Warehouse('torino','italia','bella via','fedex',0);
+}catch (Exception $e){
+    echo $e->getMessage();
+}
 
+try{
+    $magazzino2 = new Warehouse('milano','italia','bella viaetta','dhl',20);
+}catch (Exception $e){
+    echo $e->getMessage();
+}
 
-var_dump($magazzino);
 
 
 ?>
